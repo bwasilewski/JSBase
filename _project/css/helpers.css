@@ -1,0 +1,107 @@
+/* Helper classes to accomplish common tasks */
+
+.floatLeft { float: left; }
+.floatRight { float: right; }
+
+/* Image replacement:
+ * Note: You need to set explicit dimensions & background-image on the 
+ * actual element.
+ */
+.ir {
+    display: block;
+    overflow: hidden;
+
+    border: none;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    text-indent: 100%;
+    white-space: nowrap;
+}
+.ir br {
+    display: none;
+}
+
+/* Hide visually and from screenreaders:
+ */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but preserve for screenreaders:
+ */
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: none;
+}
+
+/* If something .visuallyhidden can be keyboard-focusable, add the 
+ * .focusable class:
+ */
+.visuallyhidden.focusable:focus, .visuallyhidden.focusable:active {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+
+/* Hide visually and from screenreaders, while maintaining layout:
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/* Contain floats (if applicable, consider setting { overflow: hidden; } 
+ * instead):
+ */
+.clearfix:before, .clearfix:after {
+    display: table;
+
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+.ie6 .clearfix, .ie7 .clearfix {
+    zoom: 1;
+}
+
+.printonly {
+    position: absolute;
+    left: -999em;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+    visibility: hidden;
+}
+
+/* Use for inline icons. Solves a ton of problems, especially related to 
+ * sprites. Feel free to extend with additional .ico-* classes, which would 
+ * define height, width, and background-position.
+ * Usage in HTML: <li><i class="ico ico-subtype"></i> COPY GOES HERE</li>
+ */
+.ico {
+    display: inline-block;
+/*    background-image: url(../img/icon-sprite.png);*/
+    background-repeat: no-repeat;
+    line-height: 0;
+    vertical-align: bottom;
+}
+/* Note: if you want to use a default block-level element with this, be sure 
+ * to uncomment the following declaration:
+ */
+/*.ie6 .ico, .ie7 .ico {
+    zoom: 1;
+    display: inline;
+}*/
