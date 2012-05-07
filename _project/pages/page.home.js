@@ -1,6 +1,6 @@
 (function ($) {
 
-	var IndexPage = {
+	var HomePage = {
 		initialize: function initialize () {
 			var self = this;
 
@@ -8,6 +8,6 @@
 		}
 	}
 
-	IndexPage.initialize();
+	HomePage.initialize();
 
 }(jQuery));
